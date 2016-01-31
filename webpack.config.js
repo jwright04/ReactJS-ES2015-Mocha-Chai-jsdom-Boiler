@@ -1,0 +1,20 @@
+module.exports = {
+    entry:"./js/main.js",
+    output: {
+        path: "./",
+        filename:"index.js"
+    },
+    devServer: {
+        inline:true,
+        port:1111
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel'
+            }
+        ]
+    }
+}
